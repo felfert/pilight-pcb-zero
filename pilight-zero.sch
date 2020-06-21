@@ -389,14 +389,14 @@ Wire Wire Line
 Wire Wire Line
 	4950 2100 5400 2100
 $Comp
-L Device:R R2
+L Device:R_POT_Small R2
 U 1 1 5E1DB043
-P 5350 2450
-F 0 "R2" H 5420 2496 50  0000 L CNN
-F 1 "820k" H 5420 2405 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5280 2450 50  0001 C CNN
-F 3 "~" H 5350 2450 50  0001 C CNN
-	1    5350 2450
+P 5350 2550
+F 0 "R2" H 5500 2600 50  0000 L CNN
+F 1 "1M" H 5500 2500 50  0000 L CNN
+F 2 "Potentiometer_THT:Potentiometer_ACP_CA9-H2,5_Horizontal" V 5280 2550 50  0001 C CNN
+F 3 "~" H 5350 2550 50  0001 C CNN
+	1    5350 2550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -410,12 +410,6 @@ F 3 "" H 5350 2700 50  0001 C CNN
 	1    5350 2700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5350 2600 5350 2700
-Wire Wire Line
-	5350 2300 5350 2000
-Wire Wire Line
-	5350 2000 5400 2000
 Wire Wire Line
 	5400 1600 4450 1600
 Wire Wire Line
@@ -431,4 +425,15 @@ F 3 "~" H 4450 1300 50  0001 C CNN
 	1    4450 1300
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5350 2650 5350 2700
+Wire Wire Line
+	5400 2000 5350 2000
+Wire Wire Line
+	5350 2000 5350 2350
+Wire Wire Line
+	5350 2350 5450 2350
+Wire Wire Line
+	5450 2350 5450 2550
+NoConn ~ 5350 2450
 $EndSCHEMATC
