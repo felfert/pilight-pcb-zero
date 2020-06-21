@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/felfert/Projects/kicad/pilight-pcb-zero/pilight-zero.sch)
-    (date "Sun 21 Jun 2020 11:58:27 PM CEST")
+    (date "Mon 22 Jun 2020 01:17:08 AM CEST")
     (tool "Eeschema 5.1.6-1.fc31")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -71,7 +71,7 @@
       (tstamp 5E1D6DA3))
     (comp (ref R2)
       (value 1M)
-      (footprint Potentiometer_THT:Potentiometer_ACP_CA9-H2,5_Horizontal)
+      (footprint lib:Potentiometer_ACP_CA9-H2,5_Horizontal)
       (datasheet ~)
       (libsource (lib Device) (part R_POT_Small) (description Potentiometer))
       (sheetpath (names /) (tstamps /))

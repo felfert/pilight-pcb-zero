@@ -394,7 +394,7 @@ U 1 1 5E1DB043
 P 5350 2550
 F 0 "R2" H 5500 2600 50  0000 L CNN
 F 1 "1M" H 5500 2500 50  0000 L CNN
-F 2 "Potentiometer_THT:Potentiometer_ACP_CA9-H2,5_Horizontal" V 5280 2550 50  0001 C CNN
+F 2 "lib:Potentiometer_ACP_CA9-H2,5_Horizontal" V 5280 2550 50  0001 C CNN
 F 3 "~" H 5350 2550 50  0001 C CNN
 	1    5350 2550
 	1    0    0    -1  
