@@ -11,3 +11,7 @@ Parts:
 - R1: 1k
 - R2: 820k
 - 2 Antennas: See e.g.: https://www.amazon.de/gp/product/B07FYX7WBW/ref=ppx_yo_dt_b_asin_title_o06_s00
+
+Note:
+
+ The second Antenna cable is connected directly to the TX-Module. There is a sqare solder mask for GND on the HAT PCB near U2.
