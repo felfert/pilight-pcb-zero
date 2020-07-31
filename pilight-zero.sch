@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Raspberry Pi Zero (W) uHAT for pilight"
-Date "2020-01-12"
-Rev "1.0"
+Date "2020-07-31"
+Rev "1.3"
 Comp "Fritz Elfert"
 Comment1 "This Schematic is licensed under MIT Open Source License."
 Comment2 ""
@@ -159,13 +159,13 @@ Wire Wire Line
 	3600 1800 3950 1800
 Wire Wire Line
 	3950 1700 3950 1800
-Text Label 1850 1900 0    50   ~ 0
+Text Label 2300 1900 0    50   ~ 0
 GPIO2_SDA1
-Text Label 1850 2000 0    50   ~ 0
+Text Label 2300 2000 0    50   ~ 0
 GPIO3_SCL1
 Text Label 1850 2100 0    50   ~ 0
 GPIO4_GPIO_GCLK
-Text Label 1850 2300 0    50   ~ 0
+Text Label 3650 3150 0    50   ~ 0
 GPIO17_GEN0
 Text Label 1850 2400 0    50   ~ 0
 GPIO27_GEN2
@@ -180,24 +180,14 @@ Wire Wire Line
 Wire Wire Line
 	1750 2900 2800 2900
 Wire Wire Line
-	1750 2500 2800 2500
-Wire Wire Line
 	1750 2400 2800 2400
 Wire Wire Line
-	1750 2100 2800 2100
-Wire Wire Line
-	1750 2000 2800 2000
-Wire Wire Line
-	1750 1900 2800 1900
+	2050 2000 2800 2000
 Text Label 1850 2800 0    50   ~ 0
 GPIO9_SPI_MISO
 Text Label 1850 2900 0    50   ~ 0
 GPIO11_SPI_SCLK
-NoConn ~ 1750 1900
-NoConn ~ 1750 2000
-NoConn ~ 1750 2100
 NoConn ~ 1750 2400
-NoConn ~ 1750 2500
 NoConn ~ 1750 2700
 NoConn ~ 1750 2800
 NoConn ~ 1750 2900
@@ -231,7 +221,6 @@ Wire Wire Line
 	3300 2600 4350 2600
 Wire Wire Line
 	3300 2800 4350 2800
-NoConn ~ 4350 2100
 NoConn ~ 4350 2500
 NoConn ~ 4350 2600
 NoConn ~ 4350 2800
@@ -366,8 +355,6 @@ Wire Wire Line
 	2800 2300 2700 2300
 Wire Wire Line
 	2700 2300 2700 3150
-Wire Wire Line
-	2700 3150 5400 3150
 NoConn ~ 4350 2200
 $Comp
 L Device:R R1
@@ -436,4 +423,103 @@ Wire Wire Line
 Wire Wire Line
 	5450 2350 5450 2550
 NoConn ~ 5350 2450
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J2
+U 1 1 5F24C40E
+P 950 1800
+F 0 "J2" H 1000 2117 50  0000 C CNN
+F 1 "Conn_02x04_Odd_Even" H 1000 2026 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 950 1800 50  0001 C CNN
+F 3 "~" H 950 1800 50  0001 C CNN
+	1    950  1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 2100 2800 2100
+NoConn ~ 1750 2100
+Wire Wire Line
+	2700 3150 5400 3150
+$Comp
+L power:GND #PWR0109
+U 1 1 5F28B2E2
+P 750 2250
+F 0 "#PWR0109" H 750 2000 50  0001 C CNN
+F 1 "GND" H 755 2077 50  0000 C CNN
+F 2 "" H 750 2250 50  0001 C CNN
+F 3 "" H 750 2250 50  0001 C CNN
+	1    750  2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	750  1700 750  1800
+Connection ~ 750  1800
+Wire Wire Line
+	750  1800 750  1900
+Connection ~ 750  1900
+Wire Wire Line
+	750  1900 750  2000
+Connection ~ 750  2000
+Wire Wire Line
+	750  2000 750  2250
+Wire Wire Line
+	2050 2000 2050 1800
+Wire Wire Line
+	2050 1800 1250 1800
+$Comp
+L Device:R R3
+U 1 1 5F2B5902
+P 4350 1850
+F 0 "R3" V 4143 1850 50  0000 C CNN
+F 1 "1k" V 4234 1850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4280 1850 50  0001 C CNN
+F 3 "~" H 4350 1850 50  0001 C CNN
+	1    4350 1850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4350 2000 4350 2100
+Text Label 1300 1700 0    50   ~ 0
+PwrLED
+Text Label 1300 1800 0    50   ~ 0
+PwrButton
+Wire Wire Line
+	1250 1700 4350 1700
+Text Label 1300 1900 0    50   ~ 0
+WifiLED
+Wire Wire Line
+	1600 2000 1250 2000
+Wire Wire Line
+	1600 2500 2800 2500
+Text Label 1300 2000 0    50   ~ 0
+TxLED
+$Comp
+L Device:R R4
+U 1 1 5F312684
+P 1850 1900
+F 0 "R4" V 1643 1900 50  0000 C CNN
+F 1 "1k" V 1734 1900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1780 1900 50  0001 C CNN
+F 3 "~" H 1850 1900 50  0001 C CNN
+	1    1850 1900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2000 1900 2800 1900
+Wire Wire Line
+	1700 1900 1250 1900
+$Comp
+L Device:R R5
+U 1 1 5F3354AF
+P 1600 2250
+F 0 "R5" V 1393 2250 50  0000 C CNN
+F 1 "1k" V 1484 2250 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1530 2250 50  0001 C CNN
+F 3 "~" H 1600 2250 50  0001 C CNN
+	1    1600 2250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1600 2500 1600 2400
+Wire Wire Line
+	1600 2100 1600 2000
 $EndSCHEMATC
