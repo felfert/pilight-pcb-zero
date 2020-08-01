@@ -291,7 +291,7 @@ U 1 1 5E1AE133
 P 5600 3300
 F 0 "U2" H 5778 3401 50  0000 L CNN
 F 1 "TX_433Mhz" H 5778 3310 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5600 3300 50  0001 C CNN
+F 2 "lib:TX-433Mhz" H 5600 3300 50  0001 C CNN
 F 3 "" H 5600 3300 50  0001 C CNN
 	1    5600 3300
 	1    0    0    -1  
@@ -522,4 +522,129 @@ Wire Wire Line
 	1600 2500 1600 2400
 Wire Wire Line
 	1600 2100 1600 2000
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even #J2
+U 1 1 5F250DB8
+P 2950 5350
+F 0 "#J2" H 3000 5667 50  0000 C CNN
+F 1 "Conn_02x04_Odd_Even" H 3000 5576 50  0000 C CNN
+F 2 "" H 2950 5350 50  0001 C CNN
+F 3 "~" H 2950 5350 50  0001 C CNN
+	1    2950 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED #D1
+U 1 1 5F25BDFB
+P 3000 4800
+F 0 "#D1" H 2993 5017 50  0000 C CNN
+F 1 "LED" H 2993 4926 50  0000 C CNN
+F 2 "" H 3000 4800 50  0001 C CNN
+F 3 "~" H 3000 4800 50  0001 C CNN
+	1    3000 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED #D3
+U 1 1 5F27004E
+P 3000 5900
+F 0 "#D3" H 2993 6117 50  0000 C CNN
+F 1 "LED" H 2993 6026 50  0000 C CNN
+F 2 "" H 3000 5900 50  0001 C CNN
+F 3 "~" H 3000 5900 50  0001 C CNN
+	1    3000 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED #D2
+U 1 1 5F270844
+P 3000 6250
+F 0 "#D2" H 2993 6467 50  0000 C CNN
+F 1 "LED" H 2993 6376 50  0000 C CNN
+F 2 "" H 3000 6250 50  0001 C CNN
+F 3 "~" H 3000 6250 50  0001 C CNN
+	1    3000 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push #SW1
+U 1 1 5F2717D6
+P 3000 4450
+F 0 "#SW1" H 3000 4735 50  0000 C CNN
+F 1 "SW_Push" H 3000 4644 50  0000 C CNN
+F 2 "" H 3000 4650 50  0001 C CNN
+F 3 "~" H 3000 4650 50  0001 C CNN
+	1    3000 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 4800 3450 4800
+Wire Wire Line
+	3450 4800 3450 5250
+Wire Wire Line
+	3450 5250 3250 5250
+Wire Wire Line
+	3200 4450 3550 4450
+Wire Wire Line
+	3550 4450 3550 5350
+Wire Wire Line
+	3550 5350 3250 5350
+Wire Wire Line
+	2850 4800 2500 4800
+Wire Wire Line
+	2500 4800 2500 5250
+Wire Wire Line
+	2500 5250 2750 5250
+Wire Wire Line
+	2800 4450 2400 4450
+Wire Wire Line
+	2400 4450 2400 5350
+Wire Wire Line
+	2400 5350 2750 5350
+Wire Wire Line
+	3250 5550 3450 5550
+Wire Wire Line
+	3450 5550 3450 5900
+Wire Wire Line
+	3450 5900 3150 5900
+Wire Wire Line
+	2750 5550 2500 5550
+Wire Wire Line
+	2500 5550 2500 5900
+Wire Wire Line
+	2500 5900 2850 5900
+Wire Wire Line
+	3250 5450 3550 5450
+Wire Wire Line
+	3550 5450 3550 6250
+Wire Wire Line
+	3550 6250 3150 6250
+Wire Wire Line
+	2750 5450 2400 5450
+Wire Wire Line
+	2400 5450 2400 6250
+Wire Wire Line
+	2400 6250 2850 6250
+Wire Notes Line
+	1750 3900 1750 6450
+Wire Notes Line
+	1750 6450 4000 6450
+Wire Notes Line
+	4000 6450 4000 3900
+Wire Notes Line
+	4000 3900 1750 3900
+Text Notes 1850 4050 0    50   ~ 0
+Externally wired
+Text Notes 1850 4500 0    50   ~ 0
+PwrButton
+Text Notes 1850 4850 0    50   ~ 0
+PwrLED
+Text Notes 1850 6300 0    50   ~ 0
+WifiLED
+Text Notes 1850 5950 0    50   ~ 0
+TxLED
+Wire Notes Line
+	3000 5400 1000 5400
+Wire Notes Line
+	1000 5400 1000 1850
 $EndSCHEMATC
