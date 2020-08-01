@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Raspberry Pi Zero (W) uHAT for pilight"
-Date "2020-07-31"
-Rev "1.3"
+Date "2020-08-02"
+Rev "1.4"
 Comp "Fritz Elfert"
 Comment1 "This Schematic is licensed under MIT Open Source License."
 Comment2 ""
@@ -180,14 +180,11 @@ Wire Wire Line
 Wire Wire Line
 	1750 2900 2800 2900
 Wire Wire Line
-	1750 2400 2800 2400
-Wire Wire Line
 	2050 2000 2800 2000
 Text Label 1850 2800 0    50   ~ 0
 GPIO9_SPI_MISO
 Text Label 1850 2900 0    50   ~ 0
 GPIO11_SPI_SCLK
-NoConn ~ 1750 2400
 NoConn ~ 1750 2700
 NoConn ~ 1750 2800
 NoConn ~ 1750 2900
@@ -487,41 +484,39 @@ Wire Wire Line
 Text Label 1300 1900 0    50   ~ 0
 WifiLED
 Wire Wire Line
-	1600 2000 1250 2000
+	1550 2000 1250 2000
 Wire Wire Line
-	1600 2500 2800 2500
+	1550 2500 2800 2500
 Text Label 1300 2000 0    50   ~ 0
 TxLED
 $Comp
 L Device:R R4
 U 1 1 5F312684
-P 1850 1900
-F 0 "R4" V 1643 1900 50  0000 C CNN
-F 1 "1k" V 1734 1900 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1780 1900 50  0001 C CNN
-F 3 "~" H 1850 1900 50  0001 C CNN
-	1    1850 1900
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2000 1900 2800 1900
-Wire Wire Line
-	1700 1900 1250 1900
-$Comp
-L Device:R R5
-U 1 1 5F3354AF
-P 1600 2250
-F 0 "R5" V 1393 2250 50  0000 C CNN
-F 1 "1k" V 1484 2250 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1530 2250 50  0001 C CNN
-F 3 "~" H 1600 2250 50  0001 C CNN
-	1    1600 2250
+P 1650 2050
+F 0 "R4" V 1443 2050 50  0000 C CNN
+F 1 "1k" V 1534 2050 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1580 2050 50  0001 C CNN
+F 3 "~" H 1650 2050 50  0001 C CNN
+	1    1650 2050
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1600 2500 1600 2400
+	1750 1900 2800 1900
+$Comp
+L Device:R R5
+U 1 1 5F3354AF
+P 1550 2250
+F 0 "R5" V 1343 2250 50  0000 C CNN
+F 1 "1k" V 1434 2250 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1480 2250 50  0001 C CNN
+F 3 "~" H 1550 2250 50  0001 C CNN
+	1    1550 2250
+	-1   0    0    1   
+$EndComp
 Wire Wire Line
-	1600 2100 1600 2000
+	1550 2500 1550 2400
+Wire Wire Line
+	1550 2100 1550 2000
 $Comp
 L Connector_Generic:Conn_02x04_Odd_Even #J2
 U 1 1 5F250DB8
@@ -647,4 +642,11 @@ Wire Notes Line
 	3000 5400 1000 5400
 Wire Notes Line
 	1000 5400 1000 1850
+Wire Wire Line
+	1650 1900 1250 1900
+NoConn ~ 1750 1900
+Wire Wire Line
+	1650 2200 1650 2400
+Wire Wire Line
+	1650 2400 2800 2400
 $EndSCHEMATC
